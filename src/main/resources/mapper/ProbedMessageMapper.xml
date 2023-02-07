@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.xiny.hathprobe.mapper.ProbedMessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.github.xiny.hathprobe.domain.ProbedMessage">
+            <id property="msgId" column="msg_id" jdbcType="INTEGER"/>
+            <result property="clientId" column="client_id" jdbcType="INTEGER"/>
+            <result property="timestamp" column="timestamp" jdbcType="TIMESTAMP"/>
+            <result property="trust" column="trust" jdbcType="INTEGER"/>
+            <result property="quality" column="quality" jdbcType="INTEGER"/>
+            <result property="hitrate" column="hitrate" jdbcType="VARCHAR"/>
+            <result property="hathrate" column="hathrate" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        msg_id,client_id,timestamp,
+        trust,quality,hitrate,
+        hathrate
+    </sql>
+</mapper>

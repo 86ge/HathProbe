@@ -1,0 +1,29 @@
+# 端口
+server:
+    port: 8097
+
+spring:
+    # 数据源配置
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/hath?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+        username: root
+        password: root
+        # 是否打开sql监控台  (生产环境请务必关闭此选项)
+        druid:
+            stat-view-servlet:
+                enabled: true
+            web-stat-filter:
+                enabled: true
+            filter:
+                config:
+                    enabled: true
+mybatis-plus:
+    configuration:
+        #SQL日志输出
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+        #下划线转驼峰
+        map-underscore-to-camel-case: true
+hath:
+    ipb_pass_hash: cookie
+    ipb_member_id: cookie
